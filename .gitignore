@@ -1,0 +1,30 @@
+# Qt
+*.pro.user
+*.pro.user.*
+Makefile
+Makefile.*
+*.o
+*.obj
+*.exe
+*.dll
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+*.Debug
+*.Release
+
+# Сборка
+build/
+build-*/
+cmake-build-*/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
