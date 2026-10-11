@@ -8,10 +8,15 @@
 #include <QWidget>
 
 #include <QPushButton>
+#include <QLineEdit>
 
 #include <QObject>
 #include <QStyle>
 #include <QPropertyAnimation>
+
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlError>
 
 #include <QDebug>
 
@@ -50,5 +55,14 @@ private:
 private slots:
     void onAuthTriggered();
     void onSignTriggered();
+
+    // Сброс стилей полей
+    void clearStyleAuth();
+    void clearStyleSign();
+
+    //Сброс текста полей
+    void clearTextAuth();
+    void clearTextSign();
+
 };
 #endif // MAINWINDOW_H
