@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 
+#include "adminpage.h"
+#include "managerpage.h"
+
 #include <QMessageBox>
 #include <QStackedWidget>
 #include <QWidget>
@@ -26,10 +29,14 @@
 #define SIGN_WINDOW_WIDTH 300
 #define SIGN_WINDOW_HEIGHT 300
 
+#define ADMIN_WINDOW_WIDTH 550
+#define ADMIN_WINDOW_HEIGHT 10
+
 enum PagesIndex {
     eLoginPage,
-    eManagerPage,
-    eSignPage
+    eSignPage,
+    eAdminPage,
+    eManagerPage
 };
 
 QT_BEGIN_NAMESPACE
@@ -52,6 +59,9 @@ private:
     QPropertyAnimation *panelAnimation;
     bool isPanelExpanded = false; // Флаг состояния панели
 
+    AdminPage *adminPage = nullptr;
+    ManagerPage *managerPage = nullptr;
+
 private slots:
     void onAuthTriggered();
     void onSignTriggered();
@@ -59,6 +69,9 @@ private slots:
     // Сброс стилей полей
     void clearStyleAuth();
     void clearStyleSign();
+
+    //Настрйока стилей
+    void setStyleAuth();
 
     //Сброс текста полей
     void clearTextAuth();
